@@ -7,12 +7,14 @@ const getPasswordOptions = () => {
 
 // Function for getting a random element from an array
 const getRandom = (arr) => {
-
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
 }
+console.log(getRandom(specialCharacters));
 
 // Function to generate password with user input
 const generatePassword = () => {
-
+    return "onadpfh91234429";
 }
 
 // Get references to the #generate element
