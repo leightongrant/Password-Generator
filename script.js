@@ -12,6 +12,7 @@ options.forEach((opt) => {
 
 // Function to prompt user for password options
 const getPasswordOptions = () => {
+    const upperCaseChecked = document.getElementById('uppercasechars').checked;
 }
 
 // Function for getting a random element from an array
@@ -37,7 +38,12 @@ const writePassword = () => {
     const password = generatePassword(selectedCharacters);
     const passwordText = document.querySelector('#password');
     passwordText.value = password;
+    console.log(ucase.checked);
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+
+
