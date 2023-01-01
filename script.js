@@ -19,11 +19,14 @@ const getRandom = (arr) => {
     let randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
 }
-// console.log(getRandom(specialCharacters));
 
 // Function to generate password with user input
-const generatePassword = () => {
-
+const generatePassword = (arr) => {
+    let password = '';
+    for (let i = 0; i < passwordLength; i++) {
+        password += getRandom(arr);
+    }
+    return password;
 }
 
 // Get references to the #generate element
@@ -31,9 +34,8 @@ const generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 const writePassword = () => {
-    const password = generatePassword();
+    const password = generatePassword(selectedCharacters);
     const passwordText = document.querySelector('#password');
-
     passwordText.value = password;
 }
 
