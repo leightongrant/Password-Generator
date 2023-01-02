@@ -1,3 +1,4 @@
+// Imports
 import { specialCharacters, numericCharacters, lowerCasedCharacters, upperCasedCharacters } from "./modules/chars.js";
 
 
@@ -30,7 +31,7 @@ const getRandom = (arr) => {
 const generatePassword = (arr) => {
     let password = '';
     // Get password length for password options
-    const passwordLength = getPasswordOptions[0];
+    const passwordLength = getPasswordOptions()[0];
     // Loop the length of the password, select a random 
     // character from array and concatnate to password variable
     for (let i = 0; i < passwordLength; i++) {
@@ -45,15 +46,12 @@ const generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 const writePassword = () => {
+    // Get selected characters from password options
+    const selectedCharacters = getPasswordOptions()[1];
     const password = generatePassword(selectedCharacters);
     const passwordText = document.querySelector('#password');
     passwordText.value = password;
-    console.log(getPasswordOptions());
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-
-
-

@@ -36,7 +36,7 @@ header {
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
     color: hsl(206, 17%, 28%);
-    font-size: 18px;
+    font-size: 1em;
     margin: 0 auto;
     max-width: 800px;
     padding: 30px 40px;
@@ -76,6 +76,14 @@ header {
     margin: 25px 0;
 }
 
+input#passwordlength {
+    height: 30px;
+    width: 50px;
+    border-radius: 6px;
+    border-color: #c0c7cf;
+    text-align: center;
+}
+
 .btn {
     border: none;
     background-color: hsl(360, 91%, 36%);
@@ -89,6 +97,10 @@ header {
     padding: 14px 34px;
     text-align: center;
     cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(360, 91%, 26%);
 }
 
 button[disabled] {
@@ -107,14 +119,10 @@ button[disabled] {
     border: none;
     display: block;
     width: 100%;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 85px;
+    padding: 45px 15px;
     font-size: 1.2rem;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     border: 2px dashed #c0c7cf;
     border-radius: 6px;
     resize: none;
@@ -134,6 +142,8 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
+
+    .card,
     .btn {
         font-size: 0.8rem;
     }
