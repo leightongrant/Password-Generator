@@ -97,7 +97,7 @@ input#passwordlength {
 
 .btn {
     border: none;
-    background-color: hsl(360, 91%, 36%);
+    background-color: #0A2647;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
     color: hsl(0, 0%, 100%);
@@ -111,7 +111,7 @@ input#passwordlength {
 }
 
 .btn:hover {
-    background-color: hsl(360, 91%, 26%);
+    background-color: #2C74B3;
 }
 
 button[disabled] {
