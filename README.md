@@ -15,7 +15,7 @@ Click the generate password button to generate a new password.
 
 ## Screenshot
 
-![alt screenshot](./images/Screenshot.png)
+![alt screenshot](./images/screenshot.jpeg)
 
 ## Credits
 
