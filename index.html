@@ -25,17 +25,23 @@
                 <h2>Generate a Password</h2>
             </div>
             <div class="card-body">
-                <div class="options">
-                    <h3>Options</h3>
-                    <input type="number" min="10" max="64" name="passwordlength" id="passwordlength" value="16"
-                        required>
-                    <label for="passwordlength">Password length (10 - 64)</label><br><br>
-                    <input type="checkbox" name="uppercasechars" id="uppercasechars">
-                    <label for="uppercasechars">Uppercase Characters</label><br>
-                    <input type="checkbox" name="numericchars" id="numericchars">
-                    <label for="numericchars">Numeric Characters</label><br>
-                    <input type="checkbox" name="specialchars" id="specialchars">
-                    <label for="specialchars">Special Characters</label><br>
+                <div class="usage">
+                    <div class="info">
+                        <p>Click the Generate Password button to generate a 16 digit lowercase letters password or
+                            choose from the options to generate a more secure password.</p>
+                    </div>
+                    <div class="options">
+                        <h3>Options</h3>
+                        <input type="number" min="10" max="64" name="passwordlength" id="passwordlength" value="16"
+                            required>
+                        <label for="passwordlength">Password length (10 - 64)</label><br><br>
+                        <input type="checkbox" name="uppercasechars" id="uppercasechars">
+                        <label for="uppercasechars">Uppercase Characters</label><br>
+                        <input type="checkbox" name="numericchars" id="numericchars">
+                        <label for="numericchars">Numeric Characters</label><br>
+                        <input type="checkbox" name="specialchars" id="specialchars">
+                        <label for="specialchars">Special Characters</label><br>
+                    </div>
                 </div>
                 <textarea readonly id="password" placeholder="Your Secure Password"
                     aria-label="Generated Password"></textarea>
