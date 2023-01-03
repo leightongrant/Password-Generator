@@ -21,6 +21,13 @@ i {
     margin-right: 20px;
 }
 
+.info {
+    background: #0A2647;
+    color: #f9fbfd;
+    padding: 1px 10px;
+    border-radius: 5px;
+}
+
 .wrapper {
     padding-top: 30px;
     padding-left: 20px;
@@ -39,7 +46,7 @@ header {
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-    color: hsl(206, 17%, 28%);
+    color: #0A2647;
     font-size: 1em;
     margin: 0 auto;
     max-width: 800px;
@@ -125,7 +132,8 @@ button[disabled] {
     display: block;
     width: 100%;
     padding: 45px 15px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
     text-align: center;
     margin: 10px 0;
     border: 2px dashed #c0c7cf;
