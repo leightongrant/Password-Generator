@@ -88,12 +88,10 @@ header {
     margin: 25px 0;
 }
 
-input#passwordlength {
+select {
     height: 30px;
-    width: 50px;
-    border-radius: 6px;
-    border-color: #c0c7cf;
-    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .btn {
@@ -125,13 +123,9 @@ button[disabled] {
 }
 
 #password {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
     display: block;
     width: 100%;
-    padding: 45px 15px;
+    padding: 15px 15px;
     font-size: 1.3rem;
     font-weight: bolder;
     text-align: center;
@@ -139,6 +133,7 @@ button[disabled] {
     border: 2px dashed #c0c7cf;
     border-radius: 6px;
     resize: none;
+    min-height: 120px;
     overflow: hidden;
 }
 
