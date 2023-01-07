@@ -10,6 +10,7 @@ An app to generate a random password based on user criteria
 N/A
 
 ## Usage
+[Password Generator App](https://misterouija.github.io/Password-Generator/)
 
 Click the generate password button to generate a new password.
 
