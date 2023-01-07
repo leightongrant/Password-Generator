@@ -32,9 +32,15 @@
                     </div>
                     <div class="options">
                         <h4>Options</h4>
-                        <input type="number" min="10" max="64" name="passwordlength" id="passwordlength" value="16"
-                            required>
-                        <label for="passwordlength">Password length (10 - 64)</label><br><br>
+                        <label for="passwordlength">Password length (10 - 64)
+                            <select name="passwordlength" id="passwordlength">
+                                <option value="16">--Select Length--</option>
+                                <optgroup class="weak" label="Weak"></optgroup>
+                                <optgroup class="medium" label="Medium"></optgroup>
+                                <optgroup class="strong" label="Strong"></optgroup>
+                            </select>
+                        </label><br><br>
+
                         <input type="checkbox" name="uppercasechars" id="uppercasechars">
                         <label for="uppercasechars">Inc. Uppercase Characters</label><br>
                         <input type="checkbox" name="numericchars" id="numericchars">
