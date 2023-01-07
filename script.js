@@ -65,12 +65,13 @@ const generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 const writePassword = () => {
     // Get selected characters from password options
+    // or all charaters if no option selected
     const noOption = getPasswordOptions()[2];
     const selectedCharacters = getPasswordOptions()[1];
     let password = [];
 
-    // If no option is selected generate a 
-    // 16 digit password from all characters
+    // If no option is selected, a random 16 charater
+    // password from all characters will be generated
     if (selectedCharacters.length === 0) {
         password = generatePassword(noOption);
     } else {
