@@ -19,20 +19,24 @@ for (let i = 10; i < 65; i++) {
 // Function to prompt user for password options
 function getPasswordOptions () {
     const passwordLength = document.getElementById('passwordlength').value;
+    const lowerCaseChecked = document.getElementById('lowercasechars').checked;
     const upperCaseChecked = document.getElementById('uppercasechars').checked;
     const numericChecked = document.getElementById('numericchars').checked;
     const specialCharactersChecked = document.getElementById('specialchars').checked;
-    const options = [[upperCasedCharacters, upperCaseChecked], [numericCharacters, numericChecked], [specialCharacters, specialCharactersChecked]];
-    // Default option
-    let selectedCharacters = lowerCasedCharacters;
+    const options = [[lowerCasedCharacters, lowerCaseChecked], [upperCasedCharacters, upperCaseChecked], [numericCharacters, numericChecked], [specialCharacters, specialCharactersChecked]];
+
+    // Include all characters if no options selected
+    const noOption = lowerCasedCharacters.concat(upperCasedCharacters, specialCharacters, numericCharacters);
+
     // Loop through options and create an array of all selected characters
+    let selectedCharacters = [];
     options.forEach((opt) => {
         if (opt[1] === true) {
             selectedCharacters = selectedCharacters.concat(opt[0]);
         }
     });
     // Return an array of password length and all selected characters
-    return [passwordLength, selectedCharacters];
+    return [passwordLength, selectedCharacters, noOption];
 }
 
 // Function for getting a random element from an array
@@ -61,11 +65,23 @@ const generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 const writePassword = () => {
     // Get selected characters from password options
+    const noOption = getPasswordOptions()[2];
     const selectedCharacters = getPasswordOptions()[1];
-    const password = generatePassword(selectedCharacters);
+    let password = [];
+
+    // If no option is selected generate a 
+    // 16 digit password from all characters
+    if (selectedCharacters.length === 0) {
+        password = generatePassword(noOption);
+    } else {
+        password = generatePassword(selectedCharacters);
+    }
+
     const passwordText = document.querySelector('#password');
     passwordText.value = password;
 };
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
