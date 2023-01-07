@@ -1,9 +1,23 @@
 // Imports
 import { specialCharacters, numericCharacters, lowerCasedCharacters, upperCasedCharacters } from "./modules/chars.js";
 
+// Generate password length options
+const weakOptions = document.querySelector('.weak');
+const mediumOptions = document.querySelector('.medium');
+const strongOptions = document.querySelector('.strong');
+
+for (let i = 10; i < 65; i++) {
+    if (i < 30) {
+        weakOptions.innerHTML += `<option value="${i}">${i}</option>`;
+    } else if (i < 50) {
+        mediumOptions.innerHTML += `<option value="${i}">${i}</option>`;
+    } else {
+        strongOptions.innerHTML += `<option value="${i}">${i}</option>`;
+    }
+}
 
 // Function to prompt user for password options
-const getPasswordOptions = () => {
+function getPasswordOptions () {
     const passwordLength = document.getElementById('passwordlength').value;
     const upperCaseChecked = document.getElementById('uppercasechars').checked;
     const numericChecked = document.getElementById('numericchars').checked;
@@ -25,7 +39,7 @@ const getPasswordOptions = () => {
 const getRandom = (arr) => {
     let randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
-}
+};
 
 // Function to generate password with user input
 const generatePassword = (arr) => {
@@ -39,7 +53,7 @@ const generatePassword = (arr) => {
     }
 
     return password;
-}
+};
 
 // Get references to the #generate element
 const generateBtn = document.querySelector('#generate');
@@ -51,7 +65,7 @@ const writePassword = () => {
     const password = generatePassword(selectedCharacters);
     const passwordText = document.querySelector('#password');
     passwordText.value = password;
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
