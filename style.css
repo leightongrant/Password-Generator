@@ -139,8 +139,17 @@ button[disabled] {
   overflow: hidden;
 }
 
-.placeholder {
+#placeholder {
   color: lightgray;
+  flex: 1;
+}
+.password {
+  color: #0a2647 !important;
+}
+#copy {
+  margin-left: auto;
+  color: lightgray;
+  font-size: 14px;
 }
 
 @media (max-width: 690px) {
